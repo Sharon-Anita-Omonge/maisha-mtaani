@@ -10,11 +10,13 @@ import Causes from "./Components/Causes/Causes";
 import StatisticsContainer from "./Components/CountUp/CountUp";
 import TestimonialPage from "./Components/Testimonials/Testimonials";
 import Gallery from "./Components/Galllery/Gallery";
+import ScrollToTop from "./Components/ScrollToTop";
 
 const App = () => {
 	return (
 		<div>
 			<Navbar />
+			<ScrollToTop />
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about' element={<About />} />
