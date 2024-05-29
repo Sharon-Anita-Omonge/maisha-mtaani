@@ -15,9 +15,7 @@ const Volunteer = () => {
 					<ul>
 						<li>Anita Omonge</li>
 						<li>John Czar Onyango</li>
-						<li>David Ochangi</li>
 						<li>Antony Lumbado</li>
-						<li>Eric Okech</li>
 					</ul>
 				</div>
 			</div>
