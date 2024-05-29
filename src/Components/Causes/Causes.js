@@ -1,5 +1,4 @@
 import "./Causes.css";
-import under16football4 from "../../assets/under16football4.jpeg";
 import Prisonfootball2 from "../../assets/Prisonfootball2.jpeg";
 import kitchengarden from "../../assets/kitchengarden.jpeg";
 import hero4 from "../../assets/hero4.png";
@@ -8,24 +7,27 @@ import climatechange2 from "../../assets/climatechange2.jpeg";
 import under16football2 from "../../assets/under16football2.jpeg";
 import solar from "../../assets/solar.jpeg";
 import community from "../../assets/community.jpeg";
+import { Link } from "react-router-dom";
+
+import rightarrow from "../../assets/rightchev.png";
 
 const Causes = () => {
 	return (
-		<div className=' container'>
-			<div className='hero'>
+		<div>
+			<div className='causes hero'>
 				<div>
-					<img src={under16football4} alt='' className='hero-img' />
+					<h1>Our Causes</h1>
 				</div>
 				<div className='hero-text'>
-					<h1>Empowering Futures, Breaking Chains</h1>
-					<p>
-						Discover our transformative youth empowerment projects designed to
-						educate, inspire, and uplift.
-					</p>
+					<Link to='/'>
+						<h5 className='backhome'>Home</h5>
+					</Link>
+					<img src={rightarrow} alt='right arrow' />
+					<h5>Causes</h5>
 				</div>
 			</div>
-			<div className='intro'>
-				<h2>Projects</h2>
+			<div className='container intro'>
+				<h3>Empowering Futures, Breaking Chains</h3>
 				<p>
 					Welcome to Maisha Mtaani, where we merge drug abuse awareness with
 					youth empowerment. Our projects foster resilience, knowledge, and
@@ -35,7 +37,7 @@ const Causes = () => {
 					change.
 				</p>
 			</div>
-			<div className='projects'>
+			<div className='projects container'>
 				<div className='col'>
 					<h3>Rehabilitation & Empowerment</h3>
 					<img src={Prisonfootball2} alt='' />

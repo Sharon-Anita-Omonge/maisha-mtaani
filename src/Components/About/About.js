@@ -83,9 +83,7 @@ const About = () => {
 						<h5 className='backhome'>Home</h5>
 					</Link>
 					<img src={rightarrow} alt='right arrow' />
-					<Link to='/about'>
-						<h5>About</h5>
-					</Link>
+					<h5>About</h5>
 				</div>
 			</div>
 			<div className='collapsable-cont container'>

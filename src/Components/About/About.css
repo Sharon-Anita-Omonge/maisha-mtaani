@@ -2,7 +2,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	background: url(../../assets/hero4.png);
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.2);
 	background-blend-mode: multiply;
 	width: 100%;
 	min-height: 85vh;
@@ -29,8 +29,8 @@
 	justify-content: center;
 }
 .hero-text h5 {
-	color: #fff;
-	border-bottom: 1px solid #fff;
+	color: #ffff;
+	font-weight: 900;
 }
 .hero-text img {
 	width: 15px;
@@ -38,8 +38,11 @@
 }
 
 .backhome {
-	color: var(--green) !important;
-	border-bottom: none !important;
+	border-bottom: 1px solid #f5f5ff;
+}
+.backhome:hover {
+	color: var(--purple);
+	border-bottom: 1px solid var(--purple);
 }
 .collapsible-section {
 	margin-bottom: 1rem;
