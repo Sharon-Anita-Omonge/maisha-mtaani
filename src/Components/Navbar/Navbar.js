@@ -41,8 +41,8 @@ const Navbar = () => {
 
 	const [dropdownVisible, setDropdownVisible] = useState(false);
 
-	const toggleDropdown = () => {
-		setDropdownVisible(!dropdownVisible);
+	const toggleDropdown = (visible) => {
+		setDropdownVisible(visible);
 	};
 
 	return (
@@ -107,26 +107,29 @@ const Navbar = () => {
 					<img className='logo' src={logo} alt='logo' />
 				</div>
 
-				<div
-					className='nav-links'
-					onMouseEnter={toggleDropdown}
-					onMouseLeave={toggleDropdown}
-				>
+				<div className='nav-links'>
 					<NavLink to='/'>Home</NavLink>
 					<NavLink to='/about'>About</NavLink>
 					<NavLink to='/causes'>Causes</NavLink>
 					<NavLink to='/events'>Events</NavLink>
-					<NavLink to='/pages'>Pages</NavLink>
-					{dropdownVisible && (
-						<ul className='dropdown-menu'>
-							<li>
-								<NavLink to='/volunteer'>Volunteer</NavLink>
-							</li>
-							<li>
-								<NavLink to='/gallery'>Gallery</NavLink>
-							</li>
-						</ul>
-					)}
+
+					<div
+						className='dropdown'
+						onMouseEnter={() => toggleDropdown(true)}
+						onMouseLeave={() => toggleDropdown(false)}
+					>
+						<span className='dropdown-link'>Pages</span>
+						{dropdownVisible && (
+							<ul className='dropdown-menu'>
+								<li>
+									<NavLink to='/volunteer'>Volunteer</NavLink>
+								</li>
+								<li>
+									<NavLink to='/gallery'>Gallery</NavLink>
+								</li>
+							</ul>
+						)}
+					</div>
 
 					<NavLink to='/blogs'>Blogs</NavLink>
 					<NavLink to='/contactus'>Contact</NavLink>
