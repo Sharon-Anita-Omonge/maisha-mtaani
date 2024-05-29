@@ -4,6 +4,7 @@ import deno from "../../assets/denoo.png";
 import okoko from "../../assets/okoko.png";
 import tompo from "../../assets/tompo.png";
 import jeniffer from "../../assets/jeniffer.png";
+import wallan from "../../assets/wallan.png";
 import { Link } from "react-router-dom";
 import rightarrow from "../../assets/rightchev.png";
 import schoolvisit from "../../assets/schoolvisit.jpeg";
@@ -238,7 +239,7 @@ const About = () => {
 					<section className='team-member'>
 						<img src={jeniffer} alt='community' />
 						<div className='title'>
-							<h4>Jeniffer Alosi</h4>
+							<h4>Jenipher Alosi</h4>
 							<p>Communication Manager</p>
 						</div>
 						<div className='about-socials'>
@@ -250,8 +251,20 @@ const About = () => {
 					<section className='team-member'>
 						<img src={deno} alt='community' />
 						<div className='title'>
-							<h4>David Ochangi</h4>
+							<h4>David Ochanji</h4>
 							<p>Programme Manager</p>
+							<div className='about-socials'>
+								<img src={x} alt='' />
+								<img src={linkedin} alt='' />
+								<img src={email} alt='' />
+							</div>
+						</div>
+					</section>
+					<section className='team-member'>
+						<img src={wallan} alt='community' />
+						<div className='title'>
+							<h4>David Ochanji</h4>
+							<p>Patron</p>
 							<div className='about-socials'>
 								<img src={x} alt='' />
 								<img src={linkedin} alt='' />
