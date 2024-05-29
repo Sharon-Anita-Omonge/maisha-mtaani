@@ -52,15 +52,28 @@ const About = () => {
 	const handleToggleSection = (section) => {
 		setOpenSection(openSection === section ? "" : section);
 	};
-	const [selectedImage, setSelectedImage] = useState(null);
+	const [selectedIndex, setSelectedIndex] = useState(null);
 
-	const handleImageClick = (image) => {
-		setSelectedImage(image);
+	const handleImageClick = (index) => {
+		setSelectedIndex(index);
 	};
 
 	const handleCloseModal = () => {
-		setSelectedImage(null);
+		setSelectedIndex(null);
 	};
+
+	const handlePrevClick = (e) => {
+		e.stopPropagation();
+		setSelectedIndex(
+			(prevIndex) => (prevIndex - 1 + images.length) % images.length
+		);
+	};
+
+	const handleNextClick = (e) => {
+		e.stopPropagation();
+		setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length);
+	};
+
 	return (
 		<div className='about-page'>
 			<div className='about hero'>
@@ -262,28 +275,35 @@ const About = () => {
 						</Link>
 					</p>
 				</div>
-				<div className='gallery-about'>
+				<div className='gallery'>
 					{images.map((image, index) => (
 						<img
 							key={index}
 							src={image}
 							alt={`Gallery ${index}`}
-							onClick={() => handleImageClick(image)}
+							onClick={() => handleImageClick(index)}
 							className='gallery-about'
 						/>
 					))}
-
-					{selectedImage && (
-						<div className='modal' onClick={handleCloseModal}>
-							<span className='close'>&times;</span>
-							<img
-								className='modal-content'
-								src={selectedImage}
-								alt='Selected'
-							/>
-						</div>
-					)}
 				</div>
+				{selectedIndex !== null && (
+					<div className='modal' onClick={handleCloseModal}>
+						<span className='close' onClick={handleCloseModal}>
+							&times;
+						</span>
+						<img
+							className='modal-content'
+							src={images[selectedIndex]}
+							alt='Selected'
+						/>
+						<button className='prev' onClick={handlePrevClick}>
+							&#10094;
+						</button>
+						<button className='next' onClick={handleNextClick}>
+							&#10095;
+						</button>
+					</div>
+				)}
 				);
 			</div>
 		</div>
