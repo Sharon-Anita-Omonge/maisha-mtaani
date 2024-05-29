@@ -1,7 +1,7 @@
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import "./Navbar.css";
-import React, { useState, useEffect } from "react";
 import phone from "../../assets/phone.png";
 import x from "../../assets/twitter.png";
 import email from "../../assets/email.png";
@@ -15,7 +15,6 @@ const Navbar = () => {
 	});
 
 	const handleScroll = () => {
-		console.log(window.scrollY);
 		if (window.scrollY > 0) {
 			setScrollStyle({ background: "var(--purple)", padding: "1% 10%" });
 		} else {
@@ -29,6 +28,7 @@ const Navbar = () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
+
 	const handlePhoneClick = (event) => {
 		event.preventDefault();
 		window.location.href = "tel:+254710466533";
@@ -37,6 +37,12 @@ const Navbar = () => {
 	const handleEmailClick = (event) => {
 		event.preventDefault();
 		window.location.href = "mailto:info@ocheanbays.com";
+	};
+
+	const [dropdownVisible, setDropdownVisible] = useState(false);
+
+	const toggleDropdown = () => {
+		setDropdownVisible(!dropdownVisible);
 	};
 
 	return (
@@ -72,7 +78,6 @@ const Navbar = () => {
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								{" "}
 								<img src={facebook} alt='facebook icon' />
 							</a>
 						</li>
@@ -82,7 +87,6 @@ const Navbar = () => {
 								target='_blank'
 								rel='noopener noreferrer'
 							>
-								{" "}
 								<img src={x} alt='twitter icon' />
 							</a>
 						</li>
@@ -98,25 +102,39 @@ const Navbar = () => {
 					</ul>
 				</div>
 			</div>
-			<div>
-				<nav className='nav' style={scrollStyle}>
-					<div>
-						<img className='logo' src={logo} alt='logo' />
-					</div>
-					<div>
-						<NavLink to='/'>Home</NavLink>
-						<NavLink to='/about'>About</NavLink>
-						<NavLink to='/causes'>Causes</NavLink>
-						<NavLink to='/events'>Events</NavLink>
-						<NavLink to='/pages'>Pages</NavLink>
-						<NavLink to='/blogs'>Blogs</NavLink>
-						<NavLink to='/contactus'>Contact</NavLink>
-						<NavLink to='/donate'>
-							<button className='btn'>Donate</button>
-						</NavLink>
-					</div>
-				</nav>
-			</div>
+			<nav className='nav' style={scrollStyle}>
+				<div>
+					<img className='logo' src={logo} alt='logo' />
+				</div>
+
+				<div
+					className='nav-links'
+					onMouseEnter={toggleDropdown}
+					onMouseLeave={toggleDropdown}
+				>
+					<NavLink to='/'>Home</NavLink>
+					<NavLink to='/about'>About</NavLink>
+					<NavLink to='/causes'>Causes</NavLink>
+					<NavLink to='/events'>Events</NavLink>
+					<NavLink to='/pages'>Pages</NavLink>
+					{dropdownVisible && (
+						<ul className='dropdown-menu'>
+							<li>
+								<NavLink to='/volunteer'>Volunteer</NavLink>
+							</li>
+							<li>
+								<NavLink to='/gallery'>Gallery</NavLink>
+							</li>
+						</ul>
+					)}
+
+					<NavLink to='/blogs'>Blogs</NavLink>
+					<NavLink to='/contactus'>Contact</NavLink>
+					<NavLink to='/donate'>
+						<button className='btn'>Donate</button>
+					</NavLink>
+				</div>
+			</nav>
 		</div>
 	);
 };
