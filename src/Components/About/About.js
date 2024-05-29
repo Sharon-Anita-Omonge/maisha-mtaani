@@ -282,23 +282,23 @@ const About = () => {
 						</div>
 					</section>
 					<section className='team-member'>
-						<img src={anita} alt='community' />
-						<div className='title'>
-							<h4>Female Volunteer</h4>
-							<p>Volunteer</p>
-						</div>
-					</section>
-					<section className='team-member'>
-						<img src={anita} alt='community' />
-						<div className='title'>
-							<h4>Female Volunteer</h4>
-							<p>Volunteer</p>
-						</div>
-					</section>
-					<section className='team-member'>
 						<img src={czar} alt='community' />
 						<div className='title'>
-							<h4>John Czar Onyango</h4>
+							<h4>John Ceazar Onyango</h4>
+							<p>Volunteer</p>
+						</div>
+					</section>
+					<section className='team-member'>
+						<img src={anita} alt='community' />
+						<div className='title'>
+							<h4>Female Volunteer</h4>
+							<p>Volunteer</p>
+						</div>
+					</section>
+					<section className='team-member'>
+						<img src={anita} alt='community' />
+						<div className='title'>
+							<h4>Female Volunteer</h4>
 							<p>Volunteer</p>
 						</div>
 					</section>
