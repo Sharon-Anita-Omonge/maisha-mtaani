@@ -1,0 +1,51 @@
+.row img {
+	max-width: 600px;
+	height: 500px;
+	object-fit: cover;
+	margin-top: 10px;
+	position: relative;
+}
+.get-involved {
+	margin: 90px;
+	text-align: center;
+}
+h3 {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px 5px;
+}
+.row {
+	display: flex;
+	position: relative;
+	align-items: center;
+}
+.row p {
+	background-color: #e5e4e2;
+	line-height: 1.8;
+	padding: 50px;
+	text-align: left;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	z-index: 10;
+	position: absolute;
+}
+.p-img {
+	width: auto;
+	height: auto;
+}
+.right {
+	left: 47%;
+}
+.left {
+	right: 47%;
+}
+.c-img {
+	width: 5000px;
+	height: 400px;
+}
+.ment-img {
+	width: 5000px;
+	height: 400px;
+	object-fit: cover;
+	overflow: hidden;
+}

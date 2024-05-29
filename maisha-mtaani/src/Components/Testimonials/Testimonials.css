@@ -1,0 +1,43 @@
+.testimonial-page {
+	width: 100%;
+	margin: auto;
+	text-align: start;
+	margin-top: 5%;
+}
+
+.testimonial {
+	padding: 10px;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	margin: 10px;
+	height: 300px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial h3 {
+	color: #333;
+	font-size: 1.2em;
+}
+
+.testimonial p {
+	font-size: 1em;
+	line-height: 1.5;
+	padding: 20px;
+}
+.testimonial-page {
+	padding: 20px;
+}
+
+.slick-slide {
+	display: flex;
+	justify-content: center;
+}
+
+.slick-dots li button:before {
+	color: #333;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: #333;
+}

@@ -1,0 +1,225 @@
+.about {
+	display: flex;
+	flex-wrap: wrap;
+	background: url(../../assets/hero4.png);
+	background-color: rgba(0, 0, 0, 0.4);
+	background-blend-mode: multiply;
+	width: 100%;
+	min-height: 85vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: whitesmoke;
+	display: flex;
+	align-items: right;
+	justify-content: center;
+}
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.hero h1 {
+	text-transform: uppercase;
+}
+.hero-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hero-text h5 {
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+.hero-text img {
+	width: 15px;
+	margin: 5px;
+}
+
+.backhome {
+	color: var(--green) !important;
+	border-bottom: none !important;
+}
+.collapsible-section {
+	margin-bottom: 1rem;
+}
+
+.collapsible-button {
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 10px;
+	font-size: 1.2em;
+	color: #000;
+	border: none;
+	cursor: pointer;
+}
+
+.collapsible-button:focus {
+	outline: none;
+}
+
+.collapsible-content {
+	padding: 10px 30px;
+	border-top: none;
+}
+
+.collapsible-button.active h5 {
+	color: var(--green);
+}
+
+.collapsable-cont {
+	margin-top: 5%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+}
+.collapsable-cont h3 {
+	text-align: start !important;
+}
+.collapsable {
+	width: 47%;
+}
+.collapsable-image {
+	width: 45%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+.collapsable-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#image1 {
+	height: 450px;
+}
+#part1 {
+	width: 50%;
+	margin: 5px;
+}
+#part2 {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 450px;
+}
+#image2 {
+	margin-bottom: 5px;
+}
+.mission-about {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 20px;
+	margin-top: 5%;
+}
+.abt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 2px 2px 2px rgb(133, 56, 158, 0.2);
+	width: 350px;
+	height: 350px;
+	margin: 10px;
+	padding: 10px;
+}
+.mission-header {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+}
+.mission-header img {
+	width: 50px;
+	object-fit: contain;
+}
+.mission-header h3 {
+	font-weight: 600;
+}
+.abt ul li {
+	list-style: circle var(--purple);
+	padding: 5px;
+}
+.team {
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	padding: 20px;
+}
+.meet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.team-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 50px;
+	position: relative;
+}
+.team-member {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 10px;
+	position: relative;
+	bottom: 0;
+}
+.team-member img {
+	width: 200px;
+	height: 300px;
+	object-fit: cover;
+}
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: #fff;
+	text-align: center;
+	margin-top: -60px;
+	width: 180px;
+	height: 160px;
+	position: relative;
+	box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+}
+.title p {
+	color: #343434;
+}
+.about-socials img {
+	width: 29px;
+	height: 28px;
+	object-fit: cover;
+	background-size: cover;
+	margin: 5px;
+	border: 1px solid var(--green);
+	padding: 8px;
+}
+.team-member .about-socials {
+	position: absolute;
+	bottom: 0;
+}
+.team-member .about-socials:hover {
+	cursor: pointer;
+}
+.gallery-about img {
+	width: 300px;
+	object-fit: cover;
+	height: 280px;
+	background-position: center;
+	cursor: pointer;
+	margin: 1px 3px;
+	background-size: cover;
+}

@@ -1,0 +1,39 @@
+.projects {
+	display: flex;
+	flex-basis: 31%;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.col {
+	flex: 0 0 calc(33.333% - 20px);
+	margin: 0 10px;
+	padding: 10px;
+	padding-bottom: 30px;
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+}
+.col img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: 50%;
+	border-radius: 10px;
+	object-fit: cover;
+	margin-top: 10px;
+}
+.intro {
+	text-align: center;
+	padding: 10px;
+}
+.intro p {
+	line-height: 2;
+}
+.col p {
+	margin-top: 10px;
+	line-height: 1.5;
+}
