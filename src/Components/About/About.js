@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "./About.css";
-import deno from "../../assets/denoo.png";
+import david from "../../assets/david.png";
 import okoko from "../../assets/okoko.png";
 import tompo from "../../assets/tompo.png";
 import jeniffer from "../../assets/jeniffer.png";
 import wallan from "../../assets/wallan.png";
 import anita from "../../assets/anita.png";
 import czar from "../../assets/czar.png";
+import deno from "../../assets/deno.png";
 import { Link } from "react-router-dom";
 import rightarrow from "../../assets/rightchev.png";
 import schoolvisit from "../../assets/schoolvisit.jpeg";
@@ -251,7 +252,7 @@ const About = () => {
 						</div>
 					</section>
 					<section className='team-member'>
-						<img src={deno} alt='community' />
+						<img src={david} alt='community' />
 						<div className='title'>
 							<h4>David Ochanji</h4>
 							<p>Programme Manager</p>
