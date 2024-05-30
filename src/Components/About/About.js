@@ -8,6 +8,7 @@ import wallan from "../../assets/wallan.png";
 import anita from "../../assets/anita.png";
 import czar from "../../assets/czar.png";
 import deno from "../../assets/deno.png";
+import Yvette from "../../assets/Yvette.png";
 import { Link } from "react-router-dom";
 import rightarrow from "../../assets/rightchev.png";
 import schoolvisit from "../../assets/schoolvisit.jpeg";
@@ -290,9 +291,9 @@ const About = () => {
 						</div>
 					</section>
 					<section className='team-member'>
-						<img src={anita} alt='community' />
+						<img src={Yvette} alt='community' />
 						<div className='title'>
-							<h4>Female Volunteer</h4>
+							<h4>Yvette Mitchelle</h4>
 							<p>Volunteer</p>
 						</div>
 					</section>

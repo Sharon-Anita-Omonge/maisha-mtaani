@@ -2,13 +2,13 @@
 .pics-gallery {
 	display: flex;
 	flex-wrap: wrap;
-	background: url(../../assets/gallery10.jpeg);
-	background-color: rgba(0, 0, 0, 0.4);
+	background: url(../../assets/gallery17.jpeg);
+	background-color: rgba(0, 0, 0, 0.2);
 	background-blend-mode: multiply;
 	width: 100%;
 	min-height: 85vh;
 	background-size: cover;
-	background-position: center;
+	background-position: center 30%;
 	background-repeat: no-repeat;
 	color: whitesmoke;
 	display: flex;

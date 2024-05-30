@@ -30,7 +30,9 @@
 	text-decoration: none;
 	color: #333;
 }
-
+.top-nav a:hover {
+	color: var(--purple);
+}
 .top-nav img {
 	margin-right: 3px;
 	width: 17px;
@@ -58,6 +60,10 @@
 	align-items: center;
 }
 
+.nav-links a:hover {
+	border: 1px solid var(--green);
+	padding: 7px;
+}
 .nav-links a,
 .nav-links .dropdown-link {
 	margin: 0 15px;
