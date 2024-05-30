@@ -11,6 +11,7 @@ import StatisticsContainer from "./Components/CountUp/CountUp";
 import TestimonialPage from "./Components/Testimonials/Testimonials";
 import Gallery from "./Components/Galllery/Gallery";
 import ScrollToTop from "./Components/ScrollToTop";
+import Volunteer from "./Components/Volunteer/Volunteer";
 
 const App = () => {
 	return (
@@ -26,6 +27,7 @@ const App = () => {
 				<Route path='/contact' element={<ContactUs />} />
 				<Route path='/statisticscontainer' element={<StatisticsContainer />} />
 				<Route path='/testimonials' element={<TestimonialPage />} />
+				<Route path='/volunteer' element={<Volunteer />} />
 			</Routes>
 			<Footer />
 		</div>

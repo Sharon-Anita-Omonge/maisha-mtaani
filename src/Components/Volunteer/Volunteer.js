@@ -1,22 +1,21 @@
 import React from "react";
+import "./Volunteer.css";
+import { Link } from "react-router-dom";
+import rightarrow from "../../assets/rightchev.png";
 
 const Volunteer = () => {
 	return (
-		<div>
-			{" "}
-			<div>
-				<h3>Volunteer Team</h3>
-				<p>
-					{" "}
-					Here are some of our wonderful volunteers who take their time to help
-					with the activites of maisha mtaani.{" "}
-				</p>
+		<div className='volunteer-page'>
+			<div className='hero volunteer'>
 				<div>
-					<ul>
-						<li>Anita Omonge</li>
-						<li>John Czar Onyango</li>
-						<li>Antony Lumbado</li>
-					</ul>
+					<h1>Beceome a Volunteer</h1>
+				</div>
+				<div className='hero-text'>
+					<Link to='/'>
+						<h5 className='backhome'>Home</h5>
+					</Link>
+					<img src={rightarrow} alt='right arrow' />
+					<h5>Volunteer</h5>
 				</div>
 			</div>
 		</div>
