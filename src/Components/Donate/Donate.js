@@ -30,7 +30,7 @@ const DonatePage = () => {
 
 	const handleDonateClick = (e) => {
 		e.preventDefault();
-		setShowOptions(!showOptions); // Toggle the showOptions state
+		setShowOptions(!showOptions);
 	};
 
 	const handleMpesaPayment = async () => {
