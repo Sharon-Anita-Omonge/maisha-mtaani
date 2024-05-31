@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import axios from "axios";
 import "./Donate.css";
 import rightarrow from "../../assets/rightchev.png";
 import { Link } from "react-router-dom";
 
 const DonatePage = () => {
 	const [formData, setFormData] = useState({ name: "", email: "", amount: 5 });
+	const [phoneNumber, setPhoneNumber] = useState("");
 	const [customAmount, setCustomAmount] = useState("");
 	const [showCustomInput, setShowCustomInput] = useState(false);
 	const [showOptions, setShowOptions] = useState(false);
@@ -31,8 +33,18 @@ const DonatePage = () => {
 		setShowOptions(!showOptions); // Toggle the showOptions state
 	};
 
-	const handleMpesaPayment = () => {
-		alert("Mpesa payment logic goes here");
+	const handleMpesaPayment = async () => {
+		try {
+			const response = await axios.post("http://localhost:3000/stkpush", {
+				phoneNumber,
+				amount: formData.amount,
+			});
+			alert("M-Pesa payment initiated successfully");
+			console.log("Response:", response.data);
+		} catch (error) {
+			alert("Error initiating M-Pesa payment");
+			console.error("Error:", error);
+		}
 	};
 
 	const handleBankPayment = () => {
@@ -75,6 +87,16 @@ const DonatePage = () => {
 							name='email'
 							value={formData.email}
 							onChange={handleInputChange}
+							required
+						/>
+					</div>
+					<div>
+						<label>Phone Number:</label>
+						<input
+							type='text'
+							name='phoneNumber'
+							value={phoneNumber}
+							onChange={(e) => setPhoneNumber(e.target.value)}
 							required
 						/>
 					</div>
