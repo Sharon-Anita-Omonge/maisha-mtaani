@@ -123,7 +123,7 @@ function ContactForm() {
 							<h4>Send Us Mail</h4>
 						</div>
 						<div>
-							<p>P.O.Box 40100-151, kisumu</p>
+							<p>P.O.Box 40100-151, Kisumu</p>
 						</div>
 					</div>
 					<div className='loco'>
