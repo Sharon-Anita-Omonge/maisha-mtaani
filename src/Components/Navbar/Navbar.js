@@ -59,7 +59,7 @@ const Navbar = () => {
 						<li>
 							<img src={phone} alt='phone icon' />
 							<a href='tel:254763858515' onClick={handlePhoneClick}>
-								+254 763 858 515
+								+254 753 858 515
 							</a>
 						</li>
 						<li>
