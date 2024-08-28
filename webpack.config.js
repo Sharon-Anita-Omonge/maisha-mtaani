@@ -12,20 +12,15 @@ module.exports = {
 			url: require.resolve("url/"),
 			zlib: require.resolve("browserify-zlib"),
 			querystring: require.resolve("querystring-es3"),
-			fs: false,
+			fs: false, // No fs module in the browser
 			stream: require.resolve("stream-browserify"),
 			os: require.resolve("os-browserify/browser"),
 			crypto: require.resolve("crypto-browserify"),
 			http: require.resolve("stream-http"),
-			net: false,
+			net: false, // No net module in the browser
 			buffer: require.resolve("buffer/"),
 			util: require.resolve("util/"),
 		},
-	},
-	externals: {
-		zlib: true,
-		querystring: true,
-		crypto: true,
 	},
 	module: {
 		rules: [

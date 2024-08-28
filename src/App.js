@@ -12,7 +12,6 @@ import TestimonialPage from "./Components/Testimonials/Testimonials";
 import Gallery from "./Components/Galllery/Gallery";
 import ScrollToTop from "./Components/ScrollToTop";
 import Volunteer from "./Components/Volunteer/Volunteer";
-import DonatePage from "./Components/Donate/Donate";
 
 const App = () => {
 	return (
@@ -29,7 +28,6 @@ const App = () => {
 				<Route path='/statisticscontainer' element={<StatisticsContainer />} />
 				<Route path='/testimonials' element={<TestimonialPage />} />
 				<Route path='/volunteer' element={<Volunteer />} />
-				<Route path='/donate' element={<DonatePage />} />
 			</Routes>
 			<Footer />
 		</div>
