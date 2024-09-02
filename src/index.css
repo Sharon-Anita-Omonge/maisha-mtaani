@@ -9,9 +9,8 @@ a {
 	text-decoration: none;
 }
 
-.active {
-	border: 1px solid var(--green);
-	padding: 7px;
+.active a {
+	color: var(--green);
 }
 
 body {

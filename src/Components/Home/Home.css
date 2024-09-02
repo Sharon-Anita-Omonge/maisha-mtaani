@@ -49,12 +49,7 @@
 .home-about-right {
 	width: 45%;
 }
-.home-about-right p {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
-	overflow: hidden;
-}
+
 .header {
 	margin-top: 5%;
 	color: var(--purple);
@@ -192,12 +187,6 @@
 .image-last {
 	max-width: 85%;
 }
-.home-event-details p {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
-	overflow: hidden;
-}
 .time-location {
 	display: flex;
 	align-items: center;
@@ -236,13 +225,7 @@
 	height: 300px;
 	object-fit: cover;
 }
-.home-event-right p {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 8;
-	overflow: hidden;
-	line-height: 2;
-}
+
 .home-event-right button {
 	margin-top: 40px;
 }
@@ -270,4 +253,15 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px;
+}
+.home-about-right p,
+.home-event-details p,
+.home-event-right p {
+	display: -webkit-box; /* Fallback for older browsers */
+	display: box; /* Standard property */
+	-webkit-box-orient: vertical;
+	box-orient: vertical; /* Standard property */
+	-webkit-line-clamp: 3; /* Existing code for older browsers */
+	line-clamp: 3; /* Standard property */
+	overflow: hidden;
 }

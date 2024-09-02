@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.jpg";
 import "./Navbar.css";
@@ -9,26 +9,6 @@ import linkedin from "../../assets/linkedin.png";
 import facebook from "../../assets/facebook.png";
 
 const Navbar = () => {
-	const [scrollStyle, setScrollStyle] = useState({
-		background: "transparent",
-		padding: "4% 10%",
-	});
-
-	const handleScroll = () => {
-		if (window.scrollY > 0) {
-			setScrollStyle({ background: "var(--purple)", padding: "1% 10%" });
-		} else {
-			setScrollStyle({ background: "transparent", padding: "4% 10%" });
-		}
-	};
-
-	useEffect(() => {
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, []);
-
 	const handlePhoneClick = (event) => {
 		event.preventDefault();
 		window.location.href = "tel:+254710466533";
@@ -102,7 +82,7 @@ const Navbar = () => {
 					</ul>
 				</div>
 			</div>
-			<nav className='nav' style={scrollStyle}>
+			<nav className='nav container'>
 				<div>
 					<img className='logo' src={logo} alt='logo' />
 				</div>

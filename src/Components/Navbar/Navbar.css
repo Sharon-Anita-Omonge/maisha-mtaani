@@ -46,12 +46,14 @@
 	transition: all 0.3s ease;
 	z-index: 1000;
 	top: 0;
-	position: fixed;
+	position: relative;
+	padding: 10px;
+	background-color: var(--purple);
 }
 
 .nav img.logo {
 	width: 80px;
-	height: 70px;
+	height: 60px;
 	object-fit: cover;
 }
 
@@ -61,8 +63,7 @@
 }
 
 .nav-links a:hover {
-	border: 1px solid var(--green);
-	padding: 7px;
+	color: var(--green);
 }
 .nav-links a,
 .nav-links .dropdown-link {
